@@ -138,4 +138,3 @@ func _recompute_puzzle() -> void:
 		if _blocks.has(plate):
 			satisfied += 1
 	_door_open = (satisfied == _plates.size())
-
