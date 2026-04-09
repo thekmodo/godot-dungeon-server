@@ -54,7 +54,7 @@ Server processing:
 #### State snapshots (server → clients)
 Sent at snapshot rate.
 
-`rpc_unreliable("snapshot", server_time_ms, last_input_seq_by_peer, players_state, puzzle_state)`
+`rpc("snapshot", server_time_ms, last_input_seq_by_peer, players_state, puzzle_state)` (unreliable via `@rpc(..., "unreliable")` on `snapshot` in Godot 4.x)
 
 - `players_state`: array of `{entity_id, pos, vel, yaw, pitch}`
 - `puzzle_state`: minimal authoritative fields (door open, blocks positions, plate states)

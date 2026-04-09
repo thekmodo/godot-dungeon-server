@@ -24,7 +24,7 @@ func _on_peer_disconnected(peer_id: int) -> void:
 
 func _send_snapshot() -> void:
 	var snap: Dictionary = world.build_snapshot()
-	rpc_unreliable("snapshot", snap["server_time_ms"], snap["last_input_seq_by_peer"], snap["players_state"], snap["puzzle_state"])
+	rpc("snapshot", snap["server_time_ms"], snap["last_input_seq_by_peer"], snap["players_state"], snap["puzzle_state"])
 
 @rpc("any_peer", "unreliable_ordered")
 func input_frame(seq: int, client_time_ms: int, move_x: float, move_y: float, yaw: float, pitch: float, buttons: int) -> void:

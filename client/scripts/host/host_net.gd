@@ -17,7 +17,7 @@ func _physics_process(delta: float) -> void:
 	if _snap_accum >= (1.0 / SNAPSHOT_HZ):
 		_snap_accum = 0.0
 		var snap := _world.build_snapshot()
-		rpc_unreliable("snapshot", snap["server_time_ms"], snap["last_input_seq_by_peer"], snap["players_state"], snap["puzzle_state"])
+		rpc("snapshot", snap["server_time_ms"], snap["last_input_seq_by_peer"], snap["players_state"], snap["puzzle_state"])
 
 func _on_peer_connected(peer_id: int) -> void:
 	_world.spawn_player(peer_id)
