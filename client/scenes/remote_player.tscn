@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://c0dndremoteplayer"]
+
+[ext_resource type="Script" path="res://scripts/remote_player.gd" id="1_remote"]
+
+[node name="RemotePlayer" type="Node3D"]
+script = ExtResource("1_remote")
+
+[node name="Mesh" type="MeshInstance3D" parent="."]
+mesh = SubResource("CapsuleMesh_1")
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_1"]
+radius = 0.35
+mid_height = 1.2
+

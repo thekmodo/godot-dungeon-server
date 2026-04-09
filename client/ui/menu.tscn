@@ -1,0 +1,70 @@
+[gd_scene load_steps=2 format=3 uid="uid://c0dndmenu"]
+
+[ext_resource type="Script" path="res://ui/menu.gd" id="1_menu"]
+
+[node name="Menu" type="CanvasLayer"]
+script = ExtResource("1_menu")
+
+[node name="Panel" type="Panel" parent="."]
+anchors_preset = 0
+offset_left = 24.0
+offset_top = 24.0
+offset_right = 520.0
+offset_bottom = 280.0
+
+[node name="VBox" type="VBoxContainer" parent="Panel"]
+anchors_preset = 15
+offset_left = 12.0
+offset_top = 12.0
+offset_right = -12.0
+offset_bottom = -12.0
+
+[node name="Title" type="Label" parent="Panel/VBox"]
+text = "DND Dungeon"
+
+[node name="RowHost" type="HBoxContainer" parent="Panel/VBox"]
+
+[node name="HostButton" type="Button" parent="Panel/VBox/RowHost"]
+text = "Host (local)"
+
+[node name="PortLabel" type="Label" parent="Panel/VBox/RowHost"]
+text = "Port"
+
+[node name="Port" type="LineEdit" parent="Panel/VBox/RowHost"]
+text = "24567"
+custom_minimum_size = Vector2(90, 0)
+
+[node name="RowJoin" type="HBoxContainer" parent="Panel/VBox"]
+
+[node name="JoinButton" type="Button" parent="Panel/VBox/RowJoin"]
+text = "Join"
+
+[node name="HostLabel" type="Label" parent="Panel/VBox/RowJoin"]
+text = "Host"
+
+[node name="Host" type="LineEdit" parent="Panel/VBox/RowJoin"]
+text = "127.0.0.1"
+custom_minimum_size = Vector2(160, 0)
+
+[node name="JoinPortLabel" type="Label" parent="Panel/VBox/RowJoin"]
+text = "Port"
+
+[node name="JoinPort" type="LineEdit" parent="Panel/VBox/RowJoin"]
+text = "24567"
+custom_minimum_size = Vector2(90, 0)
+
+[node name="InviteRow" type="HBoxContainer" parent="Panel/VBox"]
+
+[node name="InviteLabel" type="Label" parent="Panel/VBox/InviteRow"]
+text = "Invite"
+
+[node name="Invite" type="LineEdit" parent="Panel/VBox/InviteRow"]
+text = "dev"
+custom_minimum_size = Vector2(120, 0)
+
+[node name="Status" type="Label" parent="Panel/VBox"]
+text = "Status: idle"
+
+[node name="Metrics" type="Label" parent="Panel/VBox"]
+text = "Ping: -   Jitter: -"
+

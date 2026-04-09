@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://c0dndservermain"]
+
+[ext_resource type="Script" path="res://scripts/server_main.gd" id="1_server_main"]
+[ext_resource type="PackedScene" uid="uid://c0dndserverworld" path="res://scenes/server_world.tscn" id="2_world"]
+[ext_resource type="Script" path="res://scripts/server_net.gd" id="3_net"]
+
+[node name="Main" type="Node"]
+script = ExtResource("1_server_main")
+
+[node name="World" parent="." instance=ExtResource("2_world")]
+
+[node name="Net" type="Node" parent="."]
+script = ExtResource("3_net")
+

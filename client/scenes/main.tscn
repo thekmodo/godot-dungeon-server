@@ -1,0 +1,42 @@
+[gd_scene load_steps=9 format=3 uid="uid://c0dndclientmain"]
+
+[ext_resource type="Script" path="res://scripts/main.gd" id="1_main"]
+[ext_resource type="PackedScene" uid="uid://c0dnddungeon" path="res://scenes/dungeon.tscn" id="2_dungeon"]
+[ext_resource type="PackedScene" uid="uid://c0dndplayer" path="res://scenes/player.tscn" id="3_player"]
+[ext_resource type="Script" path="res://scripts/client_net.gd" id="4_net"]
+[ext_resource type="PackedScene" uid="uid://c0dndmenu" path="res://ui/menu.tscn" id="5_menu"]
+[ext_resource type="Script" path="res://scripts/host/host_world.gd" id="6_host_world"]
+[ext_resource type="Script" path="res://scripts/host/host_net.gd" id="7_host_net"]
+
+[node name="Main" type="Node3D"]
+script = ExtResource("1_main")
+
+[node name="Dungeon" parent="." instance=ExtResource("2_dungeon")]
+
+[node name="Player" parent="." instance=ExtResource("3_player")]
+position = Vector3(2, 1, 2)
+
+[node name="Net" type="Node" parent="."]
+script = ExtResource("4_net")
+
+[node name="Menu" parent="." instance=ExtResource("5_menu")]
+
+[node name="HostWorld" type="Node3D" parent="."]
+visible = false
+script = ExtResource("6_host_world")
+
+[node name="HostNet" type="Node" parent="."]
+script = ExtResource("7_host_net")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+rotation = Vector3(-0.8, 0.8, 0)
+light_energy = 1.2
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_1")
+
+[sub_resource type="Environment" id="Environment_1"]
+background_mode = 1
+ambient_light_source = 2
+ambient_light_energy = 0.6
+

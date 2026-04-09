@@ -1,0 +1,14 @@
+[gd_scene load_steps=4 format=3 uid="uid://c0dndserverplayer"]
+
+[ext_resource type="Script" path="res://scripts/server_player.gd" id="1_server_player"]
+
+[node name="ServerPlayer" type="CharacterBody3D"]
+script = ExtResource("1_server_player")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("CapsuleShape3D_1")
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_1"]
+radius = 0.35
+height = 1.2
+

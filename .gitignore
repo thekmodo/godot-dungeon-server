@@ -1,0 +1,16 @@
+# Godot 4
+.godot/
+.import/
+*.tmp
+*.temp
+
+# Mono / IDE
+.vs/
+.vscode/
+*.user
+*.sln
+
+# Builds
+builds/
+exports/
+

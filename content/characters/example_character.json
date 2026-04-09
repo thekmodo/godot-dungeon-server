@@ -1,0 +1,9 @@
+{
+  "format_version": 1,
+  "character_id": "example_character",
+  "display_name": "Example",
+  "class": "Rogue",
+  "level": 1,
+  "stats": { "str": 10, "dex": 16, "con": 12, "int": 12, "wis": 10, "cha": 10 }
+}
+
