@@ -2,13 +2,12 @@
 
 [ext_resource type="Script" path="res://scripts/host/host_player.gd" id="1_host_player"]
 
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_1"]
+radius = 0.35
+height = 1.2
+
 [node name="HostPlayer" type="CharacterBody3D"]
 script = ExtResource("1_host_player")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 shape = SubResource("CapsuleShape3D_1")
-
-[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_1"]
-radius = 0.35
-height = 1.2
-

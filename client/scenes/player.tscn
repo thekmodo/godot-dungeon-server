@@ -2,6 +2,10 @@
 
 [ext_resource type="Script" path="res://scripts/player_controller.gd" id="1_player_controller"]
 
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_1"]
+radius = 0.35
+height = 1.2
+
 [node name="Player" type="CharacterBody3D"]
 script = ExtResource("1_player_controller")
 
@@ -13,8 +17,3 @@ position = Vector3(0, 0.8, 0)
 
 [node name="Camera3D" type="Camera3D" parent="CameraPivot"]
 current = true
-
-[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_1"]
-radius = 0.35
-height = 1.2
-

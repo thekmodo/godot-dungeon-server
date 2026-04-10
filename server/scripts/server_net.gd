@@ -47,4 +47,3 @@ func snapshot(server_time_ms: int, last_input_seq_by_peer: Dictionary, players_s
 func pong(sent_ms: int, server_recv_ms: int) -> void:
 	# Server only.
 	pass
-

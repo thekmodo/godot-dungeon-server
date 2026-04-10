@@ -1,10 +1,9 @@
 [gd_scene load_steps=2 format=3 uid="uid://c0dndpuzzleblock"]
 
+[sub_resource type="BoxMesh" id="BoxMesh_1"]
+size = Vector3(1.6, 1.6, 1.6)
+
 [node name="PuzzleBlock" type="Node3D"]
 
 [node name="Mesh" type="MeshInstance3D" parent="."]
 mesh = SubResource("BoxMesh_1")
-
-[sub_resource type="BoxMesh" id="BoxMesh_1"]
-size = Vector3(1.6, 1.6, 1.6)
-

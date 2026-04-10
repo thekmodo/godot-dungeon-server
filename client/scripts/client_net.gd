@@ -167,7 +167,7 @@ func pong(sent_ms: int, server_recv_ms: int) -> void:
 func _apply_puzzle_state(puzzle_state: Dictionary) -> void:
 	if puzzle_state == null:
 		return
-	var blocks := puzzle_state.get("blocks", [])
+	var blocks: Array = puzzle_state.get("blocks", []) as Array
 	# Ensure visuals exist.
 	while _blocks_visual.size() < blocks.size():
 		var b: Node3D = BlockScene.instantiate()
